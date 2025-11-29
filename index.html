@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jar of Good Memories</title>
 
-    <!-- Bright Soothing Theme -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#ffffff">
 
@@ -20,7 +17,11 @@
         <h1>Jar of Good Memories</h1>
 
         <textarea id="memoryInput" placeholder="Write your good moment..."></textarea>
-        <button id="addBtn">Add to Jar</button>
+
+        <div class="btn-row">
+            <button id="addBtn">Add to Jar</button>
+            <button id="viewBtn" class="secondary">View Memories</button>
+        </div>
 
         <div class="jar-section">
             <img src="jar.png" class="jar-img" alt="Jar">
@@ -28,9 +29,17 @@
         </div>
     </div>
 
+    <!-- Popup for viewing memories -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2>Your Memories</h2>
+            <ul id="memoryList"></ul>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 
-    <!-- Register Service Worker -->
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js');
