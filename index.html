@@ -3,41 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Memories Jar</title>
+    <title>Jar of Good Memories</title>
 
+    <!-- Bright Soothing Theme -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- iPhone PWA Support -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-title" content="Memories Jar">
-    <link rel="apple-touch-icon" href="icons/icon1.png">
+    <link rel="icon" href="icon1.png" type="image/png">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Good Memories Jar</h1>
 
-        <textarea id="memoryInput" placeholder="Write your good moment here..."></textarea>
+    <div class="container">
+        <h1>Jar of Good Memories</h1>
+
+        <textarea id="memoryInput" placeholder="Write your good moment..."></textarea>
         <button id="addBtn">Add to Jar</button>
 
-        <!-- REAL JAR IMAGE AREA -->
-        <div class="jar-container">
-            <img src="icons/jar.png" class="jar-image">
-            <div id="slipsContainer"></div>
+        <div class="jar-section">
+            <img src="jar.png" class="jar-img" alt="Jar">
+            <div id="slipsContainer" class="slips"></div>
         </div>
     </div>
 
     <script src="script.js"></script>
 
-    <!-- SERVICE WORKER -->
+    <!-- Register Service Worker -->
     <script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log("Service Worker Registered"))
-        .catch(err => console.log("SW failed:", err));
-    }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
     </script>
+
 </body>
 </html>

@@ -1,18 +1,13 @@
 {
-  "name": "Good Memories Jar",
-  "short_name": "MemoriesJar",
+  "name": "Jar of Good Memories",
+  "short_name": "Memory Jar",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#f2f7ff",
-  "theme_color": "#7ba9ff",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "icons/icon1.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon1.png",
+      "src": "icon1.png",
       "sizes": "512x512",
       "type": "image/png"
     }
