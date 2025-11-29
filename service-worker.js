@@ -3,19 +3,19 @@ const FILES = [
     "index.html",
     "style.css",
     "script.js",
+    "manifest.json",
     "jar.png",
-    "icon1.png",
-    "manifest.json"
+    "icon1.png"
 ];
 
-self.addEventListener("install", (event) => {
+self.addEventListener("install", event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => cache.addAll(FILES))
     );
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", event => {
     event.respondWith(
-        caches.match(event.request).then(response => response || fetch(event.request))
+        caches.match(event.request).then(res => res || fetch(event.request))
     );
 });
