@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <meta name="apple-mobile-web-app-title" content="Memories Jar">
-    <link rel="apple-touch-icon" href="icons/icon1.png">   <!-- UPDATED -->
+    <link rel="apple-touch-icon" href="icons/icon1.png">
 </head>
 
 <body>
@@ -22,20 +22,21 @@
         <textarea id="memoryInput" placeholder="Write your good moment here..."></textarea>
         <button id="addBtn">Add to Jar</button>
 
-        <div class="jar">
+        <!-- REAL JAR IMAGE AREA -->
+        <div class="jar-container">
+            <img src="icons/jar.png" class="jar-image">
             <div id="slipsContainer"></div>
         </div>
     </div>
 
-    <!-- JS -->
     <script src="script.js"></script>
 
-    <!-- Service Worker -->
+    <!-- SERVICE WORKER -->
     <script>
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log("Service Worker Registered"))
-        .catch(err => console.log("SW failed: ", err));
+        .catch(err => console.log("SW failed:", err));
     }
     </script>
 </body>

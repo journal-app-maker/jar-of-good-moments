@@ -1,11 +1,12 @@
-const CACHE_NAME = "memory-jar-v2";
+const CACHE_NAME = "memory-jar-v3";
 
 const urlsToCache = [
   "index.html",
   "style.css",
   "script.js",
   "manifest.json",
-  "icons/icon1.png"   // UPDATED
+  "icons/icon1.png",
+  "icons/jar.png"
 ];
 
 self.addEventListener("install", event => {

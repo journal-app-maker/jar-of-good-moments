@@ -49,25 +49,44 @@ button:hover {
     background: #5e8fff;
 }
 
-.jar {
-    margin-top: 20px;
-    width: 100%;
-    height: 350px;
-    background: #fff;
-    border-radius: 25px 25px 80px 80px;
-    border: 4px solid #bad3ff;
+/* REAL JAR SECTION */
+.jar-container {
     position: relative;
-    overflow-y: auto;
-    padding: 20px;
-    box-shadow: 0px 4px 12px #dbe6ff;
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 20px;
 }
 
-.slip {
+.jar-image {
+    width: 70%;
+    max-width: 300px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.97;
+}
+
+#slipsContainer {
+    position: absolute;
+    bottom: 55px; /* Adjust to fit your jar */
+    width: 55%;
+    height: 240px;
+    max-width: 240px;
+    overflow-y: auto;
     padding: 10px;
-    margin: 8px 0;
-    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Memory slips */
+.slip {
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
     color: #333;
-    font-size: 15px;
     animation: fadeIn 0.4s ease;
 }
 
